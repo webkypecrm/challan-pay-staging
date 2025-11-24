@@ -14,20 +14,20 @@ interface CreateIncidentPayload extends PaymentParams {
   razorpayPaymentId: string;
 }
 
-interface CaseLead {
+interface Incidents {
   id: number | string;
   challanNo: string;
   vehicleNo: string;
   challanAmount: number;
 }
 interface APIData {
-  caseLeads: CaseLead[];
+  incidents: Incidents[];
 }
 
 interface CreateIncidentResponse {
   status: string;
   message: string;
-  data?: { data: APIData };
+  data?: APIData;
 }
 
 export const handleRazorpayPayment = async (
@@ -87,6 +87,7 @@ export const handleRazorpayPayment = async (
       prefill: prefillData,
       theme: { color: "#000" },
       handler: async function (response: { razorpay_payment_id: string }) {
+        sessionStorage.setItem("TRID", response.razorpay_payment_id);
         setLoader(true);
         const payload: CreateIncidentPayload = {
           challanIds,
@@ -116,28 +117,26 @@ export const handleRazorpayPayment = async (
             );
           }
           const response = apiResponse.data;
-
-          //    moengage.track_event("ticketCreated", {
-          //   irnNumbers: response?.data?.caseLeads.map(
-          //     (caseLead) => caseLead.id
-          //   ),
-          //   creationDate: new Date().toLocaleString(),
-          //   challanNumbers: response?.data?.caseLeads.map(
-          //     (caseLead) => caseLead.challanNo
-          //   ),
-          //   vehicleNumber: response?.data.caseLeads[0].vehicleNo,
-          //   challanAmount: response?.data.caseLeads.reduce(
-          //     (acc, caseLead) => acc + caseLead.challanAmount,
-          //     0
-          //   ),
-          //   paidAmount: grandTotal,
-          // });
-          //console.log(response);
-          // moengage.track_event("rewardOpted", {
-          //   rewardSelected: rewardGiven,
-          //   rewardAmount: potentialDiscount,
-          //   vehicleNo: sessionStorage.getItem("vehicleNo"),
-          // });
+          console.log(response);
+          moengage.track_event("ticketCreated", {
+            irnNumbers: response?.incidents.map((caseLead) => caseLead.id),
+            creationDate: new Date().toLocaleString(),
+            challanNumbers: response?.incidents.map(
+              (caseLead) => caseLead.challanNo
+            ),
+            vehicleNumber: response?.incidents[0].vehicleNo,
+            challanAmount: response?.incidents.reduce(
+              (acc, caseLead) => acc + caseLead.challanAmount,
+              0
+            ),
+            paidAmount: grandTotal,
+          });
+          console.log(response);
+          moengage.track_event("rewardOpted", {
+            rewardSelected: rewardGiven,
+            rewardAmount: potentialDiscount,
+            vehicleNo: sessionStorage.getItem("vehicleNo"),
+          });
           router.push(`/payment-success/${grandTotal}`);
         } catch (err) {
           console.error("Error creating incident:", err);
