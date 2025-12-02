@@ -4,22 +4,22 @@ import Image from "next/image";
 export default function TrustedByMillions() {
   const stats = [
     {
-      icon: "/trusted-by/icon1.png",
+      icon: "/trusted-by/icon1.webp",
       value: "6 Lakhs+",
       label: "Vehicles Protected",
     },
     {
-      icon: "/trusted-by/icon4.png",
+      icon: "/trusted-by/icon4.webp",
       value: "1.5 Lakh+",
       label: "Challans Resolved",
     },
     {
-      icon: "/trusted-by/icon3.png",
+      icon: "/trusted-by/icon3.webp",
       value: "53 Crore+",
       label: "Savings on Legal Fees",
     },
     {
-      icon: "/trusted-by/icon2.png",
+      icon: "/trusted-by/icon2.webp",
       value: "98%",
       label: "Successful Resolutions",
     },
@@ -108,7 +108,7 @@ export default function TrustedByMillions() {
             controls
             className="absolute top-[3%] lg:left-[24%] left-[14%] lg:w-[52%] w-[70%]  h-[94%] object-cover rounded-lg"
           /> */}
-          {/* 
+
           <video
             src="/video/video.mp4"
             autoPlay
@@ -118,7 +118,7 @@ export default function TrustedByMillions() {
             preload="none"
             controls
             className="absolute top-[3%] lg:left-[24%] left-[14%] lg:w-[52%] w-[70%]  h-[94%] object-cover rounded-lg"
-          /> */}
+          />
         </div>
       </Card>
     </div>
