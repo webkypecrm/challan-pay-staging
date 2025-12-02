@@ -1,9 +1,8 @@
-
-export default function sitemap() {
-  return [
-    {
-      url: "https://www.challanpay.in/",
-      lastModified: new Date(),
-    },
-  ];
-}
+// export default function sitemap() {
+//   return [
+//     {
+//       url: "https://www.challanpay.in/",
+//       lastModified: new Date(),
+//     },
+//   ];
+// }
