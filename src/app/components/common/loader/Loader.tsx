@@ -20,7 +20,7 @@ const Loader: React.FC<LoaderProps> = ({ progress }) => {
       </div>
       <div className="items-center absolute top-10  lg:hidden ">
         <Image
-          src={"/Images/vector.webp"}
+          src={"/images/vector.webp"}
           alt="Company Logo"
           width={700}
           height={100}

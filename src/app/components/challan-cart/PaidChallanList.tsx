@@ -114,7 +114,7 @@ function PaidChallanList({ challans }: PendingChallanListProps) {
         </>
       ) : (
         <EmptyState
-          imageSrc="/Images/paid.webp"
+          imageSrc="/images/paid.webp"
           title="No Paid Challans found on"
           subtitle={vehicleNo}
         />

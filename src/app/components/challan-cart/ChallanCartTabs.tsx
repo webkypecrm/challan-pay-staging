@@ -217,7 +217,7 @@ export function ChallanCartTabs() {
               <div className="flex items-center justify-center gap-10">
                 {/* Left side (car image) */}
                 <Image
-                  src="/Images/car.svg"
+                  src="/images/car.svg"
                   alt="car image"
                   width={70}
                   height={30}

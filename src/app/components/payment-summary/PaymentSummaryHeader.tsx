@@ -153,7 +153,7 @@ function PaymentSummaryHeader() {
         {/* Car Image */}
         <div className="absolute left-2 lg:static lg:left-auto">
           <Image
-            src="/Images/car.svg"
+            src="/images/car.svg"
             alt="car image"
             width={70}
             height={25}

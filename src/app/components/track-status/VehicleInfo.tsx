@@ -107,7 +107,7 @@ function VehicleInfo() {
                 <div className="flex items-center justify-start rounded-lg mb-2">
                   {/* Left side (car image) */}
                   <Image
-                    src="/Images/car.svg"
+                    src="/images/car.svg"
                     alt="car image"
                     width={70}
                     height={30}

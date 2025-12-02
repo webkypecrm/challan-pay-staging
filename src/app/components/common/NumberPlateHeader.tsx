@@ -42,7 +42,7 @@ interface VehicleCardProps {
 }
 
 const NumberPlateHeader: React.FC<VehicleCardProps> = ({
-  imageSrc = "/Images/car.svg",
+  imageSrc = "/images/car.svg",
   vehicleNumber,
 }) => {
   return (
