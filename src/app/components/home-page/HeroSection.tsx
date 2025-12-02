@@ -111,7 +111,7 @@ export function HeroSection() {
                       {/* Right Image */}
                       <div className="flex-1 flex flex-col items-center lg:items-end">
                         <Image
-                          src={card.image}
+                          src={`${card.image}`}
                           alt="Challan Pay"
                           width={350}
                           height={250}
