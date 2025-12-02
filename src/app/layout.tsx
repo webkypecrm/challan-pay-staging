@@ -58,7 +58,6 @@ export const metadata: Metadata = {
     description: "Pay your vehicle challans instantly with ChallanPay.",
     images: ["/logo/logo.svg"], // <-- Same logo here
   },
-
   // verification: {
   //   google: "ewEGjg8z88yht-jA-TNRSC4pQKM_5IkuY2jb4UQF1uc",
   // },

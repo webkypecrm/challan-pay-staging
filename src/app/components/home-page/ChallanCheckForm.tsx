@@ -67,25 +67,25 @@ export default function Home() {
       id: "private",
       title: "Private",
       image: "/Images/car-black.webp",
-      image1: "/Images/car.svg",
+      image1: "/images/car.svg",
     },
     {
       id: "private-two-wheeler",
       title: "Two-Wheeler",
       image: "/Images/bike-black.webp",
-      image1: "/Images/bike.svg",
+      image1: "/images/bike.svg",
     },
     {
       id: "electric",
       title: "Electric",
       image: "/Images/electric-black.webp",
-      image1: "/Images/electric.svg",
+      image1: "/images/electric.svg",
     },
     {
       id: "commercial",
       title: "Commercial",
       image: "/Images/truck-black.webp",
-      image1: "/Images/truck.svg",
+      image1: "/images/truck.svg",
     },
   ];
 
