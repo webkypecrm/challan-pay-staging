@@ -112,7 +112,7 @@ export function HeroSection() {
                       <div className="flex-1 flex flex-col items-center lg:items-end">
                         <Image
                           src={`${card.image}`}
-                          alt="Challan Pay"
+                          alt="challanpay"
                           width={350}
                           height={250}
                           className="object-contain w-64 h-auto lg:w-[380px] lg:h-[280px]"
