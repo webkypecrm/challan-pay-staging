@@ -2,8 +2,7 @@
 
 # dependencies
 /node_modules
-/sentry.edge.config.ts
-/sentry.server.config.ts
+
 /.pnp
 .pnp.*
 .yarn/*
